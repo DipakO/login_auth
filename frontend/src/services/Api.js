@@ -80,6 +80,8 @@ export const userAuthApi = createApi({
   }),
 });
 
+// Auto Generate the hooks
+// Attach  the end of  the function which type of api post our get
 export const {
   useRegisterUserMutation,
   useLoginUserMutation,
@@ -88,3 +90,7 @@ export const {
   useGetLoggedUserQuery,
   useChangeUserPasswordMutation,
 } = userAuthApi;
+
+// reducerPath : IS set to unique key of every api call
+// fetchBaseQuery : Is the store the base URL  for avoid the repitation to the comman URL
+// builing.mutation : mutation write for the post api
